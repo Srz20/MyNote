@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>jQuery</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="cs"></div>
+  <div class="js"></div>
+  <div class="jq"></div>
+  <div class="rt"></div>
+
+  <!-- scroll bar  -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!-- scroll bar  -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  <!-- scroll bar script -->
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    function home() { window.location.href = 'index.html' }
+    function css() { window.location.href = 'css.html' }
+    function js() { window.location.href = 'JavaScript.html' }
+    function react() { window.location.href = 'React.html' }
+    function jq() { window.location.href = 'JQuery.html' }
+  </script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
