@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+  <div class="navBar"></div>
   <div class="cs"></div>
   <div class="js"></div>
   <div class="jq"></div>
@@ -58,6 +58,28 @@
     function jq() { window.location.href = 'JQuery.html' }
   </script>
   <script src="script.js"></script>
+  <script>
+
+    const searchFun = () => {
+      var filter = document.getElementById('myInput').value.toUpperCase();
+      // var inp = document.getElementById('myInput');
+      let questionData = document.getElementsByClassName('accordion-button'); // To get the question data we targeted
+      for (var i = 0; i < questionData.length; i++) {
+        let qd = questionData[i].innerText;
+        // let re = new RegExp(inp.value, 'i');
+        if (qd.toUpperCase().indexOf(filter) > -1) {
+          // qd.replace(re, '<mark>$&</mark>');  // $& returns the entire matched string (some systems its $0)
+          questionData[i].style.color = "blue";
+          questionData[i].style.display = "";
+        } else {
+          questionData[i].style.display = "none";
+
+        }
+
+      }
+
+    }
+  </script>
 
 
 </body>

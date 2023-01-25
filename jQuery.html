@@ -14,41 +14,9 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="" onclick="home()">ALL IN ONE</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" onclick="home()">ALL</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" onclick="css()">CSS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="js()">JavaScript</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="react()">React js</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="jq()">jQuery</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
 <body>
+<div class="navBar"></div>
+<main>
   <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
@@ -722,6 +690,31 @@
             function react() { window.location.href = 'React.html' }
             function jq() { window.location.href = 'JQuery.html' }
           </script>
+  <script src="script.js"></script>
+
+</main>
+<script>
+
+  const searchFun = () => {
+    var filter = document.getElementById('myInput').value.toUpperCase();
+    // var inp = document.getElementById('myInput');
+    let questionData = document.getElementsByClassName('accordion-button'); // To get the question data we targeted
+    for (var i = 0; i < questionData.length; i++) {
+      let qd = questionData[i].innerText;
+      // let re = new RegExp(inp.value, 'i');
+      if (qd.toUpperCase().indexOf(filter) > -1) {
+        // qd.replace(re, '<mark>$&</mark>');  // $& returns the entire matched string (some systems its $0)
+        questionData[i].style.color = "blue";
+        questionData[i].style.display = "";
+      } else {
+        questionData[i].style.display = "none";
+
+      }
+
+    }
+
+  }
+</script>
 
 </body>
 
