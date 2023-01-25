@@ -54,8 +54,9 @@ ul[type='decimal'] :not(p) {
 }
 
 #scroll_content {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: auto;
   border: 1px solid red;
   overflow: scroll;
 }
