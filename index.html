@@ -16,7 +16,37 @@
 </head>
 
 <body>
- 
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Nav Bar</title>
+    <link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <ul>
+                <li><a href="#" onclick="home()">ALL</a></li>
+                <li><a href="#" onclick="css()">CSS</a></li>
+                <li><a href="#" onclick="react()">React</a></li>
+                <li><a href="#" onclick="js()">JavaScript</a></li>
+                <li><a href="#" onclick="jq()">jQuery</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <form action="">
+                <input type="text" placeholder="Search" onkeyup="searchFun()" id="myInput">
+                <button value="" onclick="search()">Search</button>
+            </form>
+        </div>
+    </nav>
+    
   <div class="cs"></div>
   <div class="js"></div>
   <div class="jq"></div>
